@@ -6,7 +6,7 @@ from schemas.car_schemas import CarOnlyID, FullCar
 router = APIRouter()
 
 
-@router.post('/new_car1')
+@router.post('/new_car1', response_model=CarOnlyID)
 def add_new_car1(
     id: int,
     color: str,
@@ -19,7 +19,7 @@ def add_new_car1(
     # return new_car
 
 
-@router.post('/new_car2')
+@router.post('/new_car2', response_model=FullCar)
 def add_new_car2(
     id: int,
     color: str,
@@ -27,6 +27,6 @@ def add_new_car2(
     gsb: str
 ) -> FullCar:
     new_car = add_car(id, color, model, gsb)
-    # # result = FullCar(new_car)
-    # return result
-    return new_car
+    result = FullCar(new_car)
+    return result
+    # return new_car
