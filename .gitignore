@@ -9,3 +9,5 @@ models/__pycache__/__init__.cpython-38.pyc
 models/__pycache__/car.cpython-38.pyc
 schemas/__pycache__/__init__.cpython-38.pyc
 schemas/__pycache__/car_schemas.cpython-38.pyc
+tests/__pycache__/__init__.cpython-38.pyc
+tests/__pycache__/test_request.cpython-38-pytest-7.2.0.pyc
