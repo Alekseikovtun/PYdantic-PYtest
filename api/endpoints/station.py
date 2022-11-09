@@ -14,9 +14,8 @@ def add_new_car1(
     gsb: str
 ) -> CarOnlyID:
     new_car = add_car(id, color, model, gsb)
-    result = CarOnlyID.schema(new_car)
+    result = CarOnlyID.from_orm(new_car)
     return result
-    # return new_car
 
 
 @router.post('/new_car2', response_model=FullCar)
@@ -27,6 +26,5 @@ def add_new_car2(
     gsb: str
 ) -> FullCar:
     new_car = add_car(id, color, model, gsb)
-    result = FullCar(new_car)
+    result = FullCar.from_orm(new_car)
     return result
-    # return new_car
